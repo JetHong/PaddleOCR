@@ -25,6 +25,9 @@ def build_backbone(config, model_type):
         from .rec_mobilenet_v3 import MobileNetV3
         from .rec_resnet_vd import ResNet
         support_dict = ['MobileNetV3', 'ResNet', 'ResNet_FPN']
+    elif model_type == 'e2e':
+        from .e2e_resnet_vd_pg import ResNet
+        support_dict = ['ResNet']
     else:
         raise NotImplementedError
 
